@@ -132,8 +132,9 @@ General Style
 	overflow: hidden;
 	color: #FFF;
 /*	background: linear-gradient(rgba(0,130,170,.5),rgba(0,130,170,.5)), url('../images/banner_2.jpg') center center no-repeat;
-*/	
+	
 background: radial-gradient(at 10% 50%, rgba(10, 10, 10, 0.6),black), url('../images/karteek.jpg') center center no-repeat;
+*/
 background-attachment: fixed;
 background-size: auto 100%;
 -webkit-background-size: cover;
@@ -162,6 +163,13 @@ background-size: auto 100%;
 .intro-content a {
 	color: #ffffff;
 	font-size: 1.8em;
+	padding: 5vh
+}
+
+#description {
+	color: #ffff67;
+	font-family: 'Arial';
+	font-size: 1em;
 	padding: 5vh
 }
 
@@ -579,6 +587,12 @@ header h1 {
  }
 }
 
+img {
+    border-radius: 50%;
+	width: 500px;
+	transform: translate(-50%, -50%);
+	
+}
 .cd-timeline-img {
   position: absolute;
   top: 0;
