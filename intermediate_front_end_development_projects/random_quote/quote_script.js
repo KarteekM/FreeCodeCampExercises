@@ -37,6 +37,7 @@ function getQuote() {
           $('#text').text(r.quote);
         }); */
 
+		
 
     //  var color = Math.floor(Math.random() * colors.length);
 
