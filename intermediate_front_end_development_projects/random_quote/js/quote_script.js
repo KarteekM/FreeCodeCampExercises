@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 	
     //Calculate Random Value
-     randomNumber = Math.floor((Math.random() * 10) + 1);
+     randomNumber = Math.floor((Math.random() * 13) + 1);
 	 return quoteSet[randomNumber];
      	 
 		
