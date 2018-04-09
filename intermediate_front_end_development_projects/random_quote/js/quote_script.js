@@ -27,21 +27,21 @@ $(document).ready(function() {
 	function getQuote(){
 		
 		//Array of Quotes		
-		var quoteSet = ["Talk is cheap. Show me the code ~linus torvalds",
-		                "Programs must be written for people to read, and only incidentally for machines to execute-Herald Abelson",
-						"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it-Brian Kernighan",
-                        "That's the thing about people who think they hate computers. What they really hate is lousy programmers-Larry Niven",
-						" Beware of bugs in the above code; I have only proved it correct, not tried it-Donald Knuth",
-						"I'm not a great programmer; I'm just a good programmer with great habits-Kent Beck",
-						"You've baked a really lovely cake, but then you've used dog shit for frosting.-Steve Jobs",
-						"Truth can only be found in one place: the code-Robert C Martin",
-						"A language that doesn't affect the way you think about programming is not worth knowing-Alan Perlis",
-						"A year spent in Artificial Intelligence is enough to make one believe in God-Alan Perlis",
-						"Perl – The only language that looks the same before and after RSA encryption-Keith Bostic",
-						"Any fool can write code that a computer can understand. Good programmers write code that humans can understand-Martin Fowler",
-						"The most disastrous thing that you can ever learn is your first programming language-Alan Kay",
-						"Simple things should be simple, complex things should be possible-Alan Kay",
-						"It is easier to port a shell than a shell script.-Larry Wall"];
+		var quoteSet = ["Talk is cheap. Show me the code",
+		                "Programs must be written for people to read, and only incidentally for machines to execute",
+						"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it",
+                        "That's the thing about people who think they hate computers. What they really hate is lousy programmers",
+						" Beware of bugs in the above code; I have only proved it correct, not tried it",
+						"I'm not a great programmer; I'm just a good programmer with great habits",
+						"You've baked a really lovely cake, but then you've used dog shit for frosting",
+						"Truth can only be found in one place: the code",
+						"A language that doesn't affect the way you think about programming is not worth knowing",
+						"A year spent in Artificial Intelligence is enough to make one believe in God",
+						"Perl – The only language that looks the same before and after RSA encryption",
+						"Any fool can write code that a computer can understand. Good programmers write code that humans can understand",
+						"The most disastrous thing that you can ever learn is your first programming language",
+						"Simple things should be simple, complex things should be possible",
+						"It is easier to port a shell than a shell script"];
 
 	
     //Calculate Random Value
@@ -77,11 +77,39 @@ $(document).ready(function() {
 	   
 	  return imgArray[randomNumber].src;
 	}
+	
+	function getAuthor(randomNumber){
+		var authorNames = new Array();
+			 for(var i=0;i<15;i++){
+		 authorNames[i] = "";
+		 
+	 }
+	 
+	 authorNames[0] = "~Linus Torvalds";
+	 authorNames[1] = "~Herald Abelson";
+	 authorNames[2] = "~Brian Kernighan";
+	 authorNames[3] = "~Larry Niven";
+	 authorNames[4] = "~Donald Knuth";
+	 authorNames[5] = "~Kent Beck";
+	 authorNames[6] = "~Steve Jobs";
+	 authorNames[7] = "~Robert C Martin";
+	 authorNames[8] = "~Alan Perlis";
+	 authorNames[9] = "~Kent Beck";
+	 authorNames[10] = "~Keith Bostic";
+	 authorNames[11] = "~Martin Fowler";
+	 authorNames[12] = "~Alan Kay";
+	 authorNames[13] = "~Alan Kay";
+	 authorNames[14] = "~Larry Wall";
+	 
+	 return authorNames[randomNumber];
+		
+	}
 
 	$("#new").click(function() {
 	
 		$("#quote").html('"'+getQuote()+'"');
 		$("#geekPicture").attr('src',getImage(randomNumber));
+		$("#author").html(getAuthor(randomNumber));
 	});
 	$("#tweet").click(function() {
 		var curQuote=$("#quote").html();
