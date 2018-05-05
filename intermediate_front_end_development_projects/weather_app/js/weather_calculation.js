@@ -9,6 +9,18 @@ $( document ).ready(function()
 		x.innerHTML="Geolocation is not supported by this browser.";}
     
 
+
+$("getWeatherReport").click(function(){
+		var url = "https://fcc-weather-api.glitch.me/api/current" + latitude +"&"+ longitude;
+	$.getJSON(url,function(data){
+		alert("Hello");
+      var items=[];
+	   $.each( data, function( key, val ) {
+    items.push( key,val );
+  });
+   
+	});
+});
     
 });
 
@@ -19,10 +31,3 @@ $( document ).ready(function()
      latitude = position.coords.latitude;
      longitude = position.coords.longitude;  
     }
-var url = "https://fcc-weather-api.glitch.me/api/current" + latitude +"&"+ longitude;
-$("getWeatherReport").click(function(){
-	$.get(url,function(data){
-  
-   
-	});
-});
